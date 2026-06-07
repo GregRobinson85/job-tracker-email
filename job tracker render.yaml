@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: job-tracker-email
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: GMAIL_ADDRESS
+        value: gregjrobinson85@gmail.com
+      - key: GMAIL_APP_PASSWORD
+        sync: false
+      - key: RECIPIENT_EMAIL
+        value: gregjrobinson85@gmail.com
+
+  - type: cron
+    name: weekly-email-cron
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    schedule: "0 7 * * 1"
+    startCommand: python -c "import requests; requests.post('https://job-tracker-email.onrender.com/cron/weekly')"
