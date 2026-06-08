@@ -19,7 +19,7 @@ RECIPIENT_EMAIL    = os.environ.get("RECIPIENT_EMAIL",    "gregjrobinson85@gmail
 
 SHEET_ID       = "10yCntGjKe7e0o_qWxFfRUggKiLDb2jr3qGLq-QKz3hw"
 JOBS_URL       = f"https://docs.google.com/spreadsheets/d/{SHEET_ID}/export?format=csv&gid=0"
-EMPLOYEES_URL  = f"https://docs.google.com/spreadsheets/d/{SHEET_ID}/export?format=csv&gid=1"
+EMPLOYEES_URL  = f"https://docs.google.com/spreadsheets/d/{SHEET_ID}/export?format=csv&gid=501664374"
 # ══════════════════════════════════════════════════════════════════════════
 
 TODAY = datetime.date.today()
