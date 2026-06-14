@@ -2,7 +2,7 @@ name: Weekly Action Items Email
 
 on:
   schedule:
-    - cron: '0 14 * * 1'   # Every Monday at 7:00 AM Mountain Time (14:00 UTC)
+    - cron: '0 1 * * 1'    # Every Sunday at 7:00 PM Mountain Time (01:00 UTC Monday)
   workflow_dispatch:        # Allows manual trigger from GitHub UI anytime
 
 jobs:
